@@ -1,0 +1,6 @@
+It is running on : nginx localhost server
+PORT : 8282 
+Redirected ON : --> 80
+Access ON : --> http://localhost:8282
+Run the container : --> docker start infolot
+

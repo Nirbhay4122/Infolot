@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <section class="head_er">
+        <div class="homeicon">
+            <!-- infolot main logo link -->
+            <div id="main-link">
+
+                <a id="infolnk" href="#">
+                    <b>i</b>nfo<b>L</b>ot
+                </a>
+
+            </div>
+
+            <!-- close button menu -->
+            <div id="hide-btn">
+
+                <button id="off" onclick="hdmenu()">
+                    <div class="cutbars">
+                        <span id="bar1"></span>
+                        <span id="bar2"></span>
+                    </div>
+                </button>
+
+            </div>
+
+            <!-- menu open button -->
+            <div id="show-btn">
+            
+                <button id="on" onclick="swmenu()">
+                    <div class="hamburg">
+                        <span id="bars"></span>
+                        <span id="bars"></span>
+                        <span id="bars"></span>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+        <!-- menu box -->
+        <div id="menu" class="headbtn">
+            <a href="#" class="btn_h">Nirbhay</a>
+            <a href="#" class="btn_h">Home</a>
+            <a href="#" class="btn_h">Home</a>
+            <a href="#" class="btn_h">Home</a>
+            <a href="#" class="btn_h">Home</a>
+            <span>
+                <button class="lg_btn">
+                    <i class="fa fa-sun-o"></i>
+                </button>
+                <button class="lin_btn" onclick="openloginform()">Login</button>
+            </span>
+        </div>
+        <!-- menu box end -->
+    </section>
+
+    <section id="acc-form">
+
+        <!-- registration form starts here -->
+
+        <div id="regForm" class="regformbox">
+            <h2 style="text-align: center;">Create Account</h2>
+            <form class="regform">
+                <input class="inpbox" type="text" placeholder="First name" required>
+                <input class="inpbox" type="text" placeholder="Last name" required>
+                <input class="inpbox" type="email" placeholder="Enter email">
+                <input class="inpbox" type="password" placeholder="Enter new password" required>
+                <input class="inpbox" type="password" placeholder="Re enter password" required>
+                <label for="Male">Male</label>
+                <input type="radio" name="male" id="Male">
+                <label for="Female">Female</label>
+                <input type="radio" name="female" id="Female">
+                <label for="Other">Others</label>
+                <input type="radio" name="other" id="Other">
+                <div class="fnlbtn">
+                    <button class="cncl">Cancle</button>
+                    <button class="crt">Create</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- registration form ends here -->
+
+        <!-- login form -->
+
+        <div class="form-background-shadow-box">
+            <div class="login-form-main-box">
+                <div class="form-close-btn">
+
+                    <h2>Login</h2>
+
+                    <button title="close" onclick="closeloginform()">
+                        <div class="cutbars">
+                            <span id="bar1"></span>
+                            <span id="bar2"></span>
+                        </div>
+                    </button>
+                </div>
+                <div class="side-create-btn-box">
+                    <div>
+
+                        <h5 style="color: rgb(158, 158, 158);">
+                            Knowledge shairing grows.<br>
+                            So share your knowledge by writing the content.
+                        </h5> 
+                        <p style="margin-top: 20px; font-size: 14px;">Don't have account yet ?</p>
+                        <button onclick="regformopen()">register now</button>
+
+                    </div>
+                </div>
+    
+                <div class="login-form-box">
+
+                    <form class="login-form">
+                        <input type="text" required placeholder="@username / email">
+                        <input type="password" required placeholder="Password">
+                        <input type="submit" value="Login">
+                    </form>
+
+                    <p>
+                        <a href="#"> Forgot Password ?</a>
+                    </p>
+    
+                </div>
+            </div>
+        </div>
+
+        <!-- login form end -->
+
+    </section>
+
+    <section class="content_box">
+        <div class="main-box cbox">
+            <h4>Most Demanding Content</h4>
+            <div class="contbtn">
+
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                
+                <div class="sbtn">
+                    <a href="#">
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="side-box cbox">
+            <h4>Learn Web Devlopment</h4>
+        </div>
+        <div class="aside-box cbox">
+            <h3>Learn Web Devlopment</h3>
+        </div>
+    </section>
+
+
+    <script>
+        // for menu show
+        function swmenu() {
+            document.getElementById("menu").style = "display: block;";
+            document.getElementById("on").style = "display: none;";
+            document.getElementById("off").style = "display: block;";
+        }
+        // for menu hide
+        function hdmenu() {
+            document.getElementById("menu").style = "dosplay: none;";
+            document.getElementById("off").style = "display: none;";
+            document.getElementById("on").style = "display: block;";
+        }
+        // menu script end here..
+
+        // Account form script start here
+
+        function openloginform() {
+            document.getElementById("acc-form").style = "display: block;";
+        }
+
+        function closeloginform() {
+            document.getElementById("acc-form").style = "display: none;";
+        }
+
+        // regstration form
+        function regformopen() {
+            document.getElementById('regForm').style = "display: block;";
+        }
+        // account form script ends here
+    </script>
+</body>
+</html>
