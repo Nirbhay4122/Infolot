@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/accStyle.css' %}">
+    <title>Create account</title>
+</head>
+<body>
+    <!-- header starts -->
+    <div class="_header">
+        <!-- signup sign box -->
+        <div class="signuptxtBox">
+            <span><b style="color: #ff0000;">C</b>reate <b style="color: #ff0000;">A</b>ccount</span>
+        </div>
+        <!-- home btn box -->
+        <div class="homebtnBox">
+            <a href="/">
+                <span style="margin-right: 3px;"><i class="fa fa-home"></i></span>
+                <span>Home</span>
+            </a>
+        </div>
+    </div>
+    <!-- header ends -->
+
+    <!-- signup form  -->
+    <div class="formMainbox">
+        <div class="formbox">
+            <img src="{% static 'images/user.png' %}" alt="missing">
+
+            <form action="/" class="accForm" method="post">
+
+                <label for="fname">First Name<b>*</b></label>
+                <input type="text" name="fname" id="fname" required>
+
+                <label for="lname">Last Name<b>*</b></label>
+                <input type="text" name="lname" id="lname" required>
+
+                <label for="Email">Enter Email<b>*</b></label>
+                <input type="email" name="Email" id="Email" required>
+
+                <label for="pass">Enter Password<b>*</b></label>
+                <input type="password" name="Password" id="pass" required>
+
+                <label for="rpass">Re-Enter Password<b>*</b></label>
+                <input type="password" name="Password" id="rpass" required>
+
+                <input type="submit" value="Create Account" style="width: 50%;">
+
+                <p style="margin-top: 20px; font-size: 0.8em;">
+                    Already have account, 
+                    <a href="/login">login</a>.
+                </p>
+
+            </form>
+        </div>
+    </div>
+    <!-- signup form ends -->
+</body>
+</html>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #cacaca54;
+}
+
+/* ==========>SIGNUP FORM<========== */
+
+/* header */
+._header {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 100px;
+}
+
+/* message box */
+.messageBox {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    padding: 40px 0px 0px 0px;
+    color: #ccc;
+}
+/* message box ends */
+.signuptxtBox {
+    /* border: 1px solid #000; */
+    width: fit-content;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.homebtnBox {
+    /* border: 1px solid #000; */
+    width: fit-content;
+}
+.homebtnBox a {
+    border: 1px solid #969696;
+    border-radius: 4px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 15px;
+    background-color: #cccccc7a;
+}
+/* header ends */
+
+.formMainbox {
+    /* border: 1px solid #000; */
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px 0px 0px;
+}
+.formbox {
+    border: 1px solid #b7b7b7;
+    background-color: #cacaca54;
+    height: fit-content;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0 0 0/20%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+.formbox img {
+    height: 25%;
+    width: 25%;
+    margin: 10px 0px;
+}
+
+.accForm {
+    background-color: #f9f9f9;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+.accForm label {
+    font-size: 1em;
+}
+.accForm b {
+    color: #ff0000;
+}
+.accForm input {
+    margin: 8px 0px;
+    border: 2px solid #ccc;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+}
+
+#loginForm {
+    padding: 40px 0px 0px 0px;
+}
+
+#forgot {
+    text-align: right;
+}
+#forgot a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #ff0000;
+}
+
+/* ==========>SIGNUP ENDS<========== */
+
+
+
+/* ==========>RESPONSIVE<========== */
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 750px) {
+    /* signup reponsive */
+    ._header {
+        padding: 15px 10px;
+    }
+
+    /* message box */
+    .messageBox {
+        font-size: 2.2em;
+    }
+
+
+    .signuptxtBox {
+        font-size: 1.5em;
+        letter-spacing: 0.5px;
+    }
+    .homebtnBox a {
+        font-size: 0.8em;
+    }
+    .formMainbox {
+        padding: 60px 0px 0px 0px;
+    }
+    .formbox {
+        height: fit-content;
+        width: 90vw;
+        box-shadow: 0px 0px 15px rgba(0 0 0/10%);
+    }
+    
+}

@@ -8,22 +8,23 @@
 
 
 body {
-    background-color: #eeeeee78;
     margin: 0;
     padding: 0;
+    background-color: #cacaca54;
 }
 
 /* header style starts */
 ._header {
+    background-color: #f3f3f3;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #000;
-    padding: 1px;
+    border-bottom: 1px solid #ccc;
+    /* padding: 1px; */
 }
 
 ._headerbox {
     padding: 10px;
-    border: 1px solid #888;
+    /* border: 1px solid #888; */
     display: flex;
 }
 
@@ -37,6 +38,7 @@ body {
 
 .weblink_box a {
     text-decoration: none;
+    color: #000;
     letter-spacing: 0.1em;
 }
 
@@ -72,9 +74,127 @@ body {
 
 /* search_log_box */
 .search_acc_box {
+    /* display: none; */
     width: 70%;
+    align-items: center;
+    flex-direction: row-reverse;
 }
+
+.login_btn_box {
+    /* border: 1px solid #000; */
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+
+.login_btn_box a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid #969696;
+    border-radius: 4px;
+    background-color: #cccccc7a;
+    /* background-image: linear-gradient(to right, #4f00ffc2 , #00b3ff); */
+}
+.login_btn_box a:hover {
+    opacity: 0.7;
+}
+
+/* navbar starts */
+.navbar {
+    border-top: 1px solid #ccc;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    /* box-shadow: 0px 0px 15px rgba(0 0 0/10%); */
+}
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+.navbar a {
+    display: block;
+    width: fit-content;
+    height: 35px;
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+    padding: 5px 20px;
+    white-space: nowrap;
+    /* background-color: #ccc; */
+    transition: 0.1s;
+}
+.navbar a:hover {
+    background-color: #cccccc4f;
+    border-bottom: 3px solid #ff0000;
+}
+/* navbar ends */
+
 /* header ends */
+
+/* main content section */
+.content_box {
+    /* border: 1px solid #000; */
+    width: 100%;
+    padding: 50px 100px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 'sidebar contentbox';
+    grid-template-columns: 250px auto;
+    gap: 10px;
+}
+.content_box div {
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    border-radius: 2px;
+    box-shadow: 0px 0px 15px rgba(0 0 0/10%);
+}
+.content_box .sidebar {
+    grid-area: sidebar;
+    height: fit-content;
+    max-height: 550px;
+    overflow-y: scroll;
+}
+.content_box .sidebar a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 10px;
+    text-align: left;
+    transition: 0.1s;
+}
+.content_box .sidebar a:hover {
+    border-left: 3px solid #ff0000;
+    background-color: #cccccc4f;
+}
+
+/* contentbox starts */
+.content_box .main_content_box {
+    grid-area: contentbox;
+    padding: 20px;
+    height: 400px;
+}
+/* content box ends */
+
+/* main content ends */
+
+
+
+
+
+/* footer starts */
+._footer {
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+/* footer ends */
 
 
 /* **************************Responsive******************* */
@@ -84,17 +204,45 @@ body {
 @media only screen and (max-width: 750px) {
     /* header */
     .weblink_box {
-        width: 100%;
-
+        width: 40%;
+        font-size: 1.8em;
     }
 
     /* hamberg */
     .weblink_box .ham_display_box {
-        display: block;
+        display: none;
     }
 
     .search_acc_box {
-        width: 100%;
+        width: 60%;
+    }
+    /* login box */
+
+    .login_btn_box a {
+        font-size: 0.8em;
+    }
+    
+    /* login box ends */
+
+    /* navbar starts */
+    .navbar {
+        font-size: 0.9em;
     }
     /* header ends */
+
+    /* main content section */
+    .content_box {
+        grid-template-areas: 'sidebar' 'contentbox';
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+    .content_box .main_content_box {
+        padding: 10px;
+    }
+
+    .sidebar {
+        font-size: 0.9em;
+    }
+
+    /* main content section ends */
 }

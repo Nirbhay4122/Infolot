@@ -5,3 +5,11 @@ from django.http import HttpResponse
 
 def home(request):
     return render(request, 'index.html')
+
+# signup form 
+def signup(request):
+    return render(request, 'signupForm.html')
+
+# login form 
+def login(request):
+    return render(request, 'loginForm.html')
